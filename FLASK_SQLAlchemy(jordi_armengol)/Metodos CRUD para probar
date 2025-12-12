@@ -1,0 +1,12 @@
+POST:
+Invoke-RestMethod "http://127.0.0.1:5000/api/books" -Method POST -ContentType "application/json" -Body (@{title="El Imperio Final"; author="Brandon Sanderson"; price=20.0} | ConvertTo-Json)
+
+PUT:
+Invoke-RestMethod "http://127.0.0.1:5000/api/books/1" -Method PUT -ContentType "application/json" -Body (@{price=99.99} | ConvertTo-Json)
+
+GET:
+Invoke-RestMethod "http://127.0.0.1:5000/api/books" -Method GET
+Invoke-RestMethod "http://127.0.0.1:5000/api/books/1" -Method GET
+
+DELETE:
+Invoke-RestMethod "http://127.0.0.1:5000/api/books/1" -Method DELETE
