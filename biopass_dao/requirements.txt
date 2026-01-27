@@ -1,5 +1,0 @@
-psycopg2-binary
-python-dotenv
-opencv-contrib-python
-numpy
-Pillow
